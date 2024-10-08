@@ -6,13 +6,14 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
-    Future.delayed(const Duration(seconds: 2), () {
-      Get.offNamed('/loginpage'); 
-    });
+     Future.delayed(const Duration(seconds: 2), () {
+    //Get.toNamed('/loginpage');
+      Get.toNamed('/dashboard');
+      });
+
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 251, 242),
+      backgroundColor: const Color.fromARGB(255, 252, 250, 245),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,10 +23,6 @@ class SplashScreen extends StatelessWidget {
               height: 190
            ),
             const SizedBox(height: 15),
-            // const Text(
-            //   'Welcome to My App',
-            //   style: TextStyle(fontSize: 24, color: Colors.white),
-            // ),
           ],
         ),
       ),

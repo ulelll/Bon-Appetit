@@ -61,6 +61,30 @@ flutter:
   uses-material-design: true
   assets:
   - assets/images/bonapetit.png 
+  - assets/images/violet.jpg
+  - assets/images/adriana lima.jpg
+  - assets/images/cat.png 
+  - assets/images/chickencurry.jpg
+  - assets/images/childe.jpg
+  - assets/images/cillianMurphy.jpg 
+  - assets/images/cookies.jpg
+  - assets/images/gyrozeppeli.jpg
+  - assets/images/italiansalad.jpg 
+  - assets/images/johnnyjoestar.jpg
+  - assets/images/klepon.jpg
+  - assets/images/kurtcobain.jpg
+  - assets/images/lavacake.jpg
+  - assets/images/minipancake.jpg 
+  - assets/images/mohito.jpg
+  - assets/images/oglioolio.jpg
+  - assets/images/pastries.jpg
+  - assets/images/puddingcaramel.jpg
+  - assets/images/seafood.jpg
+  - assets/images/softscrambledegg.jpg 
+  - assets/images/tylerdurden.jpg
+  - assets/images/yasuho.jpg
+  - assets/images/lunch.jpg
+  - assets/images/ramen.jpg
 
 
   # To add assets to your application, add an assets section, like this:

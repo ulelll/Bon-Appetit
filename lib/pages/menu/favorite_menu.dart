@@ -8,7 +8,7 @@ class FavoriteMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
-        body: Center(child: Text("This is Profile menu")),
+        body: Center(child: Text("This is Favorite menu")),
      );
   }
 }

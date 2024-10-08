@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:bon_appetit/widgets/btn_widgets.dart'; 
+import 'package:bon_appetit/widgets/textfield_widgets.dart';
+import 'package:bon_appetit/widgets/bggradient_widgets.dart';
+import 'package:bon_appetit/widgets/formcontainer_widgets.dart';
+import 'package:bon_appetit/widgets/footerlogin_widgets.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -7,22 +12,44 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Login Page"),
-      ),
-      body: Center(
-        child: Column(          
-          children: [
-            const Text("Press to move to another page"),
-            ElevatedButton(
-              onPressed: () {
+      body: Stack(
+        children: [
+          const BggradientWidgets(
+            text: 'Hi there! \n Welcome back! ',
+          ),
+          FormContainer(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const TextfieldWidgets(
+                  label: 'Email or Phone Number',
+                  suffixIcon: Icons.check,
+                ),
 
-                Get.toNamed('/dashboard');
-              },
-              child: const Text("Login"),
+                const SizedBox(height: 20),
+                  const TextfieldWidgets(
+                    label: 'Password',
+                    obscureText: true,
+                  suffixIcon: Icons.visibility_off,
+                ),
+                
+                const SizedBox(height: 30),
+                BtnWidgets(
+                  label: "Let's cook!",
+                  onPressed: () {
+                    Get.toNamed('/dashboard');
+                  },
+                ),
+                const SizedBox(height: 40),
+                const LoginFooter(
+                  text: "Don't have an account?",
+                  buttonText: "Sign up here! ",
+                  route: '/signuppage',
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
