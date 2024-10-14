@@ -10,6 +10,7 @@ import 'package:bon_appetit/widgets/carousel_food1_widgets.dart';
 //import 'package:bon_appetit/widgets/cardfood_widgets.dart';
 import 'package:bon_appetit/widgets/textdoang-widgets.dart';
 import 'package:bon_appetit/widgets/carousel_categories_widgets.dart';
+import 'package:bon_appetit/widgets/carouselbulat_widgets.dart';
 
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
@@ -54,6 +55,17 @@ class HomeMenu extends StatelessWidget {
                   ),
                   CarouselCategoriesWidgets(categories: categories), 
                   const SizedBox(height: 50),
+
+                  const Padding( padding: EdgeInsets.only(right: 200),
+                    child: Textdoangwidgets(
+                      h1: 'Top Chefs',
+                      h1FontSize: 25,
+                      h1Color: Color.fromARGB(255, 69, 24, 82),
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  CarouselbulatWidgets(), 
+                  const SizedBox(height: 50),
                         ],
                       ),
                     ),
@@ -79,9 +91,9 @@ class HomeMenu extends StatelessWidget {
                           greetingColor: Color.fromARGB(255, 252, 250, 245),
                           subtitleColor: Color.fromARGB(255, 252, 250, 245),
                         ),
-                      ],
-                    ),
+                     ],
                  ),
+             ),
         ],
       ),
     );

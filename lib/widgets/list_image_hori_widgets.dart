@@ -13,7 +13,7 @@ class ListImageHoriWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150, // Adjust height as needed
+      height: 150,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: imagePaths.length,
@@ -26,7 +26,7 @@ class ListImageHoriWidgets extends StatelessWidget {
 
   Widget _buildImageCard(String imagePath, String title) {
     return Container(
-      width: 120, // Adjust width as needed
+      width: 120, 
       margin: const EdgeInsets.only(right: 10),
       child: Column(
         children: [

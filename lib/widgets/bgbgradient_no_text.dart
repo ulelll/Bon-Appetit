@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//export home,profile,fav,
 
 class BggradientNoText extends StatelessWidget {
   const BggradientNoText({Key? key}) : super(key: key); 

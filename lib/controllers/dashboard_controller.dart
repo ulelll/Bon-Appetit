@@ -9,5 +9,4 @@ class DashboardController extends GetxController{
     selectedIndex.value = index;
   }
 }
-
 //mengatur perpindahan menu

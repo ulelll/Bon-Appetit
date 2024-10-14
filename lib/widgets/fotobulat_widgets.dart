@@ -3,31 +3,25 @@ import 'package:flutter/material.dart';
 class FotobulatWidgets extends StatelessWidget {
   final String imagePath;
   final double radius;
-  final Color borderColor; // Add border color parameter
-  final double borderWidth; // Add border width parameter
+  final Color borderColor;
+  final double borderWidth;
 
   const FotobulatWidgets({
-    Key? key,
+    super.key,
     required this.imagePath,
-    required this.radius,
-    this.borderColor = Colors.white, // Default border color
-    this.borderWidth = 2.0, // Default border width
-  }) : super(key: key);
+    this.radius = 40.0,
+    this.borderColor = Colors.white,
+    this.borderWidth = 3.0,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: radius * 2 + borderWidth * 2, // Adjust width for border
-      height: radius * 2 + borderWidth * 2, // Adjust height for border
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(color: borderColor, width: borderWidth), // Create border
-      ),
-      child: ClipOval(
-        child: Image.asset(
-          imagePath,
-          fit: BoxFit.cover,
-        ),
+    return CircleAvatar(
+      radius: radius + borderWidth,
+      backgroundColor: borderColor,
+      child: CircleAvatar(
+        radius: radius,
+        backgroundImage: AssetImage(imagePath),
       ),
     );
   }

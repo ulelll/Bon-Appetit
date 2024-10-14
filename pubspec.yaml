@@ -85,7 +85,9 @@ flutter:
   - assets/images/yasuho.jpg
   - assets/images/lunch.jpg
   - assets/images/ramen.jpg
-
+  - assets/images/orang1.png
+  - assets/images/orang2.png
+  - assets/images/orang3.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -2,31 +2,36 @@ import 'package:flutter/material.dart';
 
 class FormContainer extends StatelessWidget {
   final Widget child;
+  final double height;
+  final double topPadding;
+  final double borderRadius;
+  final Color backgroundColor;
 
   const FormContainer({
     Key? key,
     required this.child,
+    this.height = 700.0,  
+    this.topPadding = 200.0,
+    this.borderRadius = 40.0,
+    this.backgroundColor = Colors.white,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 200.0),
+      padding: EdgeInsets.only(top: topPadding),
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(40),
-            topRight: Radius.circular(40),
+            topLeft: Radius.circular(borderRadius),
+            topRight: Radius.circular(borderRadius),
           ),
-          color: Color.fromARGB(255, 252, 250, 245),
+          color: backgroundColor,
         ),
-        height: double.infinity,
+        height: height,  
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.only(
-            left: 25.0,
-            right: 20,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: child,
         ),
       ),

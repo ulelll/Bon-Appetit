@@ -96,7 +96,7 @@ class ProfileMenu extends StatelessWidget {
                 CustomIconBtn(
                   text: "Log out",
                   icon: Icons.logout,
-                  onPressed: () { Get.toNamed('/loginpage');
+                  onPressed: () { Get.toNamed('/getstartedpage');
                   },
                   width: 300, 
                   height: 45, 

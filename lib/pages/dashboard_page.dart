@@ -1,7 +1,6 @@
 import 'package:bon_appetit/controllers/dashboard_controller.dart';
 import 'package:bon_appetit/pages/menu/home_menu.dart';
 import 'package:bon_appetit/pages/menu/favorite_menu.dart';
-import 'package:bon_appetit/pages/menu/recipe_menu.dart';
 import 'package:bon_appetit/pages/menu/profile_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,18 +14,17 @@ class DashboardPage extends StatelessWidget {
 
     final List<Widget> menus = [
       const HomeMenu(),
-      const RecipeMenu(),
+     // const RecipeMenu(),
       const FavoriteMenu(),
       const ProfileMenu(),
     ];
 
     return Obx(() {
       return Scaffold(
-        
         body: menus[dashboardController.selectedIndex.value],
         bottomNavigationBar: Container(          
           decoration: BoxDecoration(
-            color: Colors.purple[700],
+            color: const Color.fromARGB(255, 89, 21, 118),
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -42,36 +40,32 @@ class DashboardPage extends StatelessWidget {
           ),
           
           child: ClipRRect(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             ),
           child: BottomNavigationBar(
-            backgroundColor: const Color.fromARGB(255, 116, 35, 145), 
-            selectedItemColor: const Color.fromARGB(255, 62, 31, 75), 
-            unselectedItemColor: const Color.fromARGB(255, 88, 22, 117), 
+            backgroundColor: const Color.fromARGB(255, 77, 18, 92), 
+            selectedItemColor: const Color.fromARGB(255, 255, 255, 255), 
+            unselectedItemColor: const Color.fromARGB(255, 48, 15, 62), 
             currentIndex: dashboardController.selectedIndex.value,
             onTap: dashboardController.changeMenu,
             items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined),
-                label: "Home",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.library_books),
-                label: "Recipe",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.bookmark_border_outlined),
-                label: "Favorite",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person_2_outlined),
-                label: "Profile",
-              ),
-            ],
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home_filled),
+                  label: "Home",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.favorite),
+                  label: "Favorite",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person_2_rounded),
+                  label: "Profile",
+                  ),
+              ],
+            ),
           ),
-        ),
         ),
       );
     });

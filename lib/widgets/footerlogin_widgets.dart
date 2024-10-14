@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+//login
+
 class LoginFooter extends StatelessWidget {
   final String text; 
   final String buttonText; 
@@ -37,7 +39,7 @@ class LoginFooter extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 17,
                 color: Color.fromARGB(255, 255, 224, 111),
-                decoration: TextDecoration.underline,
+                
               ),
             ),
           ),

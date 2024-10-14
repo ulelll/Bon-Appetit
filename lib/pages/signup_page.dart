@@ -15,33 +15,29 @@ class SignupPage extends StatelessWidget {
       body: Stack(
         children: [
           const BggradientWidgets(
-            text: 'Hi there! \nCreate your new account',
+            text: 'Hi there! \nCreate your account',
           ),
           FormContainer(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const TextfieldWidgets(
-                  label: 'Email',
-                  suffixIcon: Icons.check,
-                ),
-                const SizedBox(height: 20),
-                const TextfieldWidgets(
-                  label: 'Phone number',
-                  suffixIcon: Icons.check,
-                ),
-                const SizedBox(height: 20),
-                const TextfieldWidgets(
-                  label: 'Password',
-                  obscureText: true,
-                  suffixIcon: Icons.visibility_off,
-                ),
-                const SizedBox(height: 30),
-                BtnWidgets(
-                  label: "Let's cook!",
-                  onPressed: () {
-                    Get.toNamed('/dashboard');
-                  },
+                    const SizedBox(height: 30,),
+                    const TextfieldWidgets(
+                      label: 'Email Or Phone Number',
+                      suffixIcon: Icons.app_registration_rounded,
+                    ),
+                    const SizedBox(height: 20),
+                    const TextfieldWidgets(
+                      label: 'Password',
+                      obscureText: true,
+                      suffixIcon: Icons.lock,
+                    ),
+                    const SizedBox(height: 30),
+                  BtnWidgets(
+                    label: "Let's cook!",
+                    onPressed: () {
+                      Get.offNamed('/dashboard');
+                    },
                 ),
                 const SizedBox(height: 40),
                 const SignupFooter(

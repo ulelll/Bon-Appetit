@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//export login signup page
+
 
 class BggradientWidgets extends StatelessWidget {
   final String text; 

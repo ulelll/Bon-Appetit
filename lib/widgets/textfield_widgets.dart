@@ -24,7 +24,7 @@ class TextfieldWidgets extends StatelessWidget {
           color: Color.fromARGB(255, 248, 226, 82),
         ),
         border: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
         ),
       ),
     );
